@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "item-component.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`project-1`",
+          "name": "itemcomponent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true
+            },
+            {
+              "kind": "field",
+              "name": "haxProperties",
+              "static": true,
+              "description": "haxProperties integration via file reference"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "privacy": "public",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "t",
+              "type": {
+                "text": "object"
+              },
+              "default": "{\n      ...this.t,\n      title: \"Title\",\n    }"
+            },
+            {
+              "kind": "field",
+              "name": "",
+              "privacy": "public",
+              "attribute": ""
+            }
+          ],
+          "attributes": [
+            {
+              "name": "",
+              "fieldName": ""
+            },
+            {
+              "name": "title",
+              "fieldName": "title"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "DDDSuper",
+              "package": "@haxtheweb/d-d-d/d-d-d.js"
+            },
+            {
+              "name": "I18NMixin",
+              "package": "@haxtheweb/i18n-manager/lib/I18NMixin.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "item-component",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "itemcomponent",
+          "declaration": {
+            "name": "itemcomponent",
+            "module": "item-component.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "project-1.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`project-1`",
+          "name": "project1",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true
+            },
+            {
+              "kind": "field",
+              "name": "haxProperties",
+              "static": true,
+              "description": "haxProperties integration via file reference"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "privacy": "public",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "t",
+              "type": {
+                "text": "object"
+              },
+              "default": "{\n      ...this.t,\n      title: \"Title\",\n    }"
+            },
+            {
+              "kind": "field",
+              "name": "",
+              "privacy": "public",
+              "attribute": ""
+            }
+          ],
+          "attributes": [
+            {
+              "name": "",
+              "fieldName": ""
+            },
+            {
+              "name": "title",
+              "fieldName": "title"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "DDDSuper",
+              "package": "@haxtheweb/d-d-d/d-d-d.js"
+            },
+            {
+              "name": "I18NMixin",
+              "package": "@haxtheweb/i18n-manager/lib/I18NMixin.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "project-1",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "project1",
+          "declaration": {
+            "name": "project1",
+            "module": "project-1.js"
+          }
+        }
+      ]
+    }
+  ]
+}
