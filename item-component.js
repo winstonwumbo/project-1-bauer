@@ -12,7 +12,7 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
  * @demo index.html
  * @element item-component
  */
-export class itemcomponent extends DDDSuper(I18NMixin(LitElement)) {
+export class ItemComponent extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
     return "item-component";
@@ -20,26 +20,21 @@ export class itemcomponent extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
-    this.title = "";
-    this.t = this.t || {};
-    this.t = {
-      ...this.t,
-      title: "Title",
-    };
-    this.registerLocalization({
-      context: this,
-      localesPath:
-        new URL("./locales/item-component.ar.json", import.meta.url).href +
-        "/../",
-      locales: ["ar", "es", "hi", "zh"],
-    });
+    this.pageTitle = "";
+    this.description="";
+    this.image = "";
+    this.link= "";
+
   }
 
   // Lit reactive properties
   static get properties() {
     return {
       ...super.properties,
-      title: { type: String },
+      pageTitle: { type: String },
+      description: { type: String },
+      image: { type: String },
+      link: { type: String }
     };
   }
 
@@ -60,15 +55,36 @@ export class itemcomponent extends DDDSuper(I18NMixin(LitElement)) {
       h3 span {
         font-size: var(--project-1-label-font-size, var(--ddd-font-size-s));
       }
+      .card{
+        display: inline-block;
+      width: 240px;
+      height: 240px;
+      border: var(--ddd-border-sm);
+      border-color: var(--ddd-theme-default-nittanyNavy);
+      box-shadow: var(--ddd-boxShadow-xl);
+      border-radius: var(--ddd-spacing-3);
+      text-decoration: none;
+      margin-bottom: var(--ddd-spacing-2);
+      margin-top: var(--ddd-spacing-2);
+      background-color: var(--ddd-theme-default-limestoneLight);
+      text-align: center;
+      }
+      .title
+      {
+        font-weight: bold;
+      }
     `];
   }
 
   // Lit render the HTML
   render() {
     return html`
-<div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
+<div class="card">
+  <img class="image" src="${this.source}" alt="${this.alt}"/>
+  <br/>
+  <div class="title">${this.pageTitle}</div>
+  <div class="description">${this.description}</div>
+  
 </div>`;
   }
 
@@ -81,5 +97,5 @@ export class itemcomponent extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(item-component.tag, itemcomponent);
+globalThis.customElements.define(ItemComponent.tag, ItemComponent);
 
