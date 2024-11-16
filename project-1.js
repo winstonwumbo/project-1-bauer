@@ -6,7 +6,7 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "@haxtheweb/simple-icon/simple-icon.js"; 
-
+import "@lrnwebcomponents/hax-iconset/lib/simple-hax-iconset.js";
 
 import "./item-component.js"
 
@@ -255,7 +255,7 @@ export class project1 extends DDDSuper(I18NMixin(LitElement)) {
            
             ${this.siteLogo ? html`<img class="siteImg" src="${this.domain()}/${this.siteLogo}" alt="${this.siteName}"/>` : ''}
          
-            ${this.siteName ? html`<h1>${this.siteName}</h1>` : ''} <simple-icon class="icon" icon="av:play-circle-outline"></simple-icon><br>
+            ${this.siteName ? html`<h1>${this.siteName}</h1>` : ''} <simple-icon class="icon" icon="${this.icon}"></simple-icon><br>
      
             ${this.siteDescription ? html`<h1>Description: ${this.siteDescription}</h1>` : ''}
          
