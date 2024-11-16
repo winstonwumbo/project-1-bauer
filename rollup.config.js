@@ -27,6 +27,10 @@ export default {
           src: 'node_modules/@haxtheweb/simple-icon/lib/svgs',
           dest: 'public',
         },
+        {
+          src: 'node_modules/@lrnwebcomponents/hax-iconset/lib/svgs',
+          dest: 'public',
+        },
       ],
     }),
     /** Resolve bare module imports */
