@@ -23,7 +23,7 @@ export default {
     copy({
       targets: [
         {
-          src: 'node_modules/@lrnwebcomponents/simple-icon/lib/svgs',
+          src: 'node_modules/@haxtheweb/simple-icon/lib/svgs',
           dest: 'public',
         },
       ],
