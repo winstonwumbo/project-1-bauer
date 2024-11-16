@@ -20,6 +20,14 @@ export default {
     html({
       minify: true,
     }),
+    copy({
+      targets: [
+        {
+          src: 'node_modules/@lrnwebcomponents/simple-icon/lib/svgs',
+          dest: 'public',
+        },
+      ],
+    }),
     /** Resolve bare module imports */
     nodeResolve(),
     /** Minify JS, compile JS to a lower language target */
