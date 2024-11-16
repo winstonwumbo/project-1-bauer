@@ -28,7 +28,7 @@ export default {
           dest: 'public',
         },
         {
-          src: 'node_modules/@lrnwebcomponents/hax-iconset/lib/svgs',
+          src: 'node_modules/@haxtheweb/hax-iconset/lib/svgs',
           dest: 'public',
         },
       ],
